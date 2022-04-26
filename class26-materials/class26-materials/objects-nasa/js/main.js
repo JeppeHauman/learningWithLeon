@@ -6,6 +6,8 @@ function getAPOD(){
         .then(res => res.json())
         .then(data => {
             document.querySelector('img').src = data.hdurl
+            document.querySelector('h2').innerText = data.title
+            document.querySelector('h3').innerText = data.explanation
         })
 }
 
