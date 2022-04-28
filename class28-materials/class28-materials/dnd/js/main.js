@@ -9,9 +9,11 @@ function getFetch(){
       .then(res => res.json()) // parse response as JSON
       .then(data => {
           console.log(data);
-          let subClasses = data.subclasses
-          subClasses.forEach(element => {
-              document.querySelector('h4').innerText += ` ${element.name}`
+          data.subclasses.forEach(obj => {
+              console.log(obj.name)
+              const li = document.createElement('li')
+              li.textContent = obj.name
+              document.querySelector('ul').appendChild(li)
           });
       })
       .catch(err => {
