@@ -49,7 +49,11 @@ let katja = new Front('Katja', 'Front-end', 'React')
 let laura = new Contractor('Laura', 'Front-end')
 
 
+let people = [jeppe, katja, laura]
 
+for(person of people){
+    person.sayHello()
+}
 
 // class Contractor{
 //     constructor(name,role){
